@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Галерея | Sneaker Store</title>
+     <link rel="stylesheet" href="./style.css">
+
+    <!-- Шрифты -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS для анимации -->
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo span { color: #4a90e2; font-weight: 700; }
+
+        .menu a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #2b2b2b;
+            font-weight: 500;
+        }
+
+        .menu a.active { color: #e26a6a; }
+
+        .search-box input {
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .page-title {
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+
+        .page-title h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 36px;
+            color: #2b2b2b;
+            margin-bottom: 10px;
+        }
+
+        .page-title p {
+            color: #555;
+            font-size: 18px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px 50px 50px;
+        }
+
+        .gallery-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery-card img {
+            width: 100%;
+            display: block;
+            border-radius: 12px;
+            transition: transform 0.5s;
+        }
+
+        .gallery-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .gallery-card:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .cart-icon {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #4a90e2;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            cursor: pointer;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: #e26a6a;
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- ===== ШАПКА ===== -->
+    <header class="header">
+        <div class="logo">
+            Sneaker<span>Store</span>
+        </div>
+
+        <nav class="menu">
+            <a href="index.html">Главная</a>
+            <a href="men.html">Мужчины</a>
+            <a href="women.html">Женщины</a>
+            <a href="kids.html">Дети</a>
+            <a href="gallery.html" class="active">Галерея</a>
+        </nav>
+
+        <div class="search-box">
+            <input type="text" placeholder="Поиск кроссовок...">
+        </div>
+    </header>
+
+    <!-- ===== ЗАГОЛОВОК СТРАНИЦЫ ===== -->
+    <section class="page-title">
+        <h1>Галерея</h1>
+        <p>Стильные фото кроссовок для вдохновения</p>
+    </section>
+
+    <!-- ===== СЕТКА ГАЛЕРЕИ ===== -->
+    <section class="gallery-grid">
+        <div class="gallery-card">
+            <img src="images/gallery/g1.jpg" alt="Sneaker">
+            <div class="gallery-overlay">Air Run Pro</div>
+        </div>
+        <div class="gallery-card">
+            <img src="images/gallery/g2.jpg" alt="Sneaker">
+            <div class="gallery-overlay">Street Flex</div>
+        </div>
+        <div class="gallery-card">
+            <img src="images/gallery/g3.jpg" alt="Sneaker">
+            <div class="gallery-overlay">Speed Max</div>
+        </div>
+        <div class="gallery-card">
+            <img src="images/gallery/g4.jpg" alt="Sneaker">
+            <div class="gallery-overlay">Urban Speed</div>
+        </div>
+        <div class="gallery-card">
+            <img src="images/gallery/g5.jpg" alt="Sneaker">
+            <div class="gallery-overlay">Air Glam</div>
+        </div>
+        <div class="gallery-card">
+            <img src="images/gallery/g6.jpg" alt="Sneaker">
+            <div class="gallery-overlay">Run Chic</div>
+        </div>
+        <div class="gallery-card">
+            <img src="images/gallery/g7.jpg" alt="Sneaker">
+            <div class="gallery-overlay">Flex Style</div>
+        </div>
+        <div class="gallery-card">
+            <img src="images/gallery/g8.jpg" alt="Sneaker">
+            <div class="gallery-overlay">Power Flex</div>
+        </div>
+        <div class="gallery-card">
+            <img src="images/gallery/g9.jpg" alt="Sneaker">
+            <div class="gallery-overlay">Mini Air</div>
+        </div>
+        <div class="gallery-card">
+            <img src="images/gallery/g10.jpg" alt="Sneaker">
+            <div class="gallery-overlay">Speedy Kids</div>
+        </div>
+        <div class="gallery-card">
+            <img src="images/gallery/g11.jpg" alt="Sneaker">
+            <div class="gallery-overlay">Fun Run</div>
+        </div>
+        <div class="gallery-card">
+            <img src="images/gallery/g12.jpg" alt="Sneaker">
+            <div class="gallery-overlay">Air Motion</div>
+        </div>
+        <div class="gallery-card">
+            <img src="images/gallery/g13.jpg" alt="Sneaker">
+            <div class="gallery-overlay">Urban Glide</div>
+        </div>
+        <div class="gallery-card">
+            <img src="images/gallery/g14.jpg" alt="Sneaker">
+            <div class="gallery-overlay">Street Wave</div>
+        </div>
+    </section>
+
+    <!-- ===== ИКОНКА КОРЗИНЫ ===== -->
+    <div class="cart-icon">
+        🛒
+        <span class="cart-count">0</span>
+    </div>
+
+</body>
+</html>

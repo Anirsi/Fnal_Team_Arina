@@ -1,0 +1,338 @@
+/* =================== ОБЩИЕ СТИЛИ =================== */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    color: #2b2b2b;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* =================== ШАПКА =================== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #4a90e2; /* синий акцент */
+}
+
+.menu a {
+    margin: 0 15px;
+    color: #2b2b2b;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu a:hover,
+.menu a.active {
+    color: #e26a6a; /* красный акцент */
+}
+
+.search-box input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* =================== ЗАГОЛОВКИ СТРАНИЦ =================== */
+.page-title {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+.page-title h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    color: #2b2b2b;
+    margin-bottom: 10px;
+}
+
+.page-title p {
+    color: #555;
+    font-size: 18px;
+}
+
+/* =================== КАРТОЧКИ ТОВАРОВ =================== */
+.products {
+    padding: 20px 50px 50px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+    width: 100%;
+    display: block;
+}
+
+.product-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.product-card p {
+    margin: 0 10px 10px 10px;
+    color: #555;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.details-btn, .cart-btn {
+    padding: 8px 15px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.details-btn {
+    background-color: #4a90e2;
+    color: #fff;
+}
+
+.details-btn:hover {
+    background-color: #3577b0;
+}
+
+/* ===== HERO БЛОК ===== */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* вертикальное центрирование */
+    align-items: center; /* горизонтальное центрирование */
+    text-align: center; /* чтобы текст был по центру */
+    height: 300px; /* можно менять под твою картинку или баннер */
+    margin-bottom: 50px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.hero-btn {
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.hero-btn:hover {
+    background-color: #3577b0;
+}
+
+
+
+.cart-btn {
+    background-color: #e26a6a;
+    color: #fff;
+}
+
+.cart-btn:hover {
+    background-color: #b54556;
+}
+
+/* =================== ИКОНКА КОРЗИНЫ =================== */
+.cart-icon {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #4a90e2;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #e26a6a;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =================== DETAIL PAGE =================== */
+.product-detail {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.detail-container {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.detail-image img {
+    width: 400px;
+    border-radius: 12px;
+}
+
+.detail-info h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.detail-info p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.detail-info h3 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.detail-info ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.detail-info ul li {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* =================== GALLERY =================== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 50px 50px;
+}
+
+.gallery-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-card img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    transition: transform 0.5s;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gallery-card:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* =================== RESPONSIVE =================== */
+@media (max-width: 1024px) {
+    .detail-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .detail-image img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
